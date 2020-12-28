@@ -29,8 +29,9 @@ class Example(QWidget):
 
 
     def circles(self, qp):
-        qp.setBrush(QColor("yellow"))
-        qp.setPen(QColor("yellow"))
+        color = (randint(0, 255), randint(0, 255), randint(0, 255))
+        qp.setBrush(QColor(*color))
+        qp.setPen(QColor(*color))
         x = randint(0, self.width())
         y = randint(0, self.height())
         size = randint(0, self.height() // 2)
